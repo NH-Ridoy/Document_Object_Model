@@ -1,6 +1,19 @@
-// document.querySelector()
-// document.querySelectorAll()
 
+let btn = document.querySelector('button');
+let colors = ['green', 'red', 'silver', 'orange'];
 
+let value = 0;
 
-document.querySelector('.my-div a').innerHTML = 'What class do you study in ?';
+btn.addEventListener('click',() =>{
+    let h1 = document.querySelector('h1')
+    h1.innerText = 'Javascript';
+
+    h1.style.color = colors[value];
+
+    if(value >= colors.length){
+        value = 0;
+    }else{
+        value++;
+    }
+
+});
